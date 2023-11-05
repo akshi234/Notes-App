@@ -59,7 +59,8 @@ function Chats({ groupName, onArrowClick }) {
   };
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      handleSubmit();
+      e.preventDefault();
+      if (inputText.trim() !== "") handleSubmit();
     }
   };
 

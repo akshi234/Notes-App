@@ -10,6 +10,7 @@ function Left({ onGroupClick }) {
   const [selectedGroup, setSelectedGroup] = useState(null);
   const LOCAL_STORAGE_KEY_PREFIX = "groupData";
   const CREATED_GROUPS_KEY = "createdGroups";
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 900);
 
   const saveCreatedGroups = (groupNames) => {
     localStorage.setItem(CREATED_GROUPS_KEY, JSON.stringify(groupNames));
@@ -67,6 +68,14 @@ function Left({ onGroupClick }) {
     loadCreatedGroups();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={styles.leftSide}>
       <div className={styles.contentContainer}>
@@ -83,8 +92,15 @@ function Left({ onGroupClick }) {
             // className={styles.grp1}
             onClick={() => handleGroupClick(group.name)}
             className={
-              group.name === selectedGroup ? styles.selectedGroup : styles.grp1
+              isMobileView
+                ? styles.grp1
+                : group.name === selectedGroup
+                ? styles.selectedGroup
+                : styles.grp1
             }
+            // className={
+            //   group.name === selectedGroup ? styles.selectedGroup : styles.grp1
+            // }
           >
             <div
               className={styles.groupColor}
@@ -94,6 +110,8 @@ function Left({ onGroupClick }) {
                 {group.name && group.name.slice(0, 2).toUpperCase()}
               </span>
             </div>
+            {group.name === selectedGroup && !isMobileView}
+
             <p className={styles.note1}>{group.name}</p>
           </div>
         ))}
