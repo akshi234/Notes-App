@@ -49,7 +49,6 @@ function Left({ onGroupClick }) {
       );
 
       setShowPopUp(false);
-      setSelectedGroup(newGroup.name);
     }
   };
   const handleGroupClick = (groupName) => {
