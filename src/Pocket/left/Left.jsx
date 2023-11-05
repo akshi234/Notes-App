@@ -98,9 +98,6 @@ function Left({ onGroupClick }) {
                 ? styles.selectedGroup
                 : styles.grp1
             }
-            // className={
-            //   group.name === selectedGroup ? styles.selectedGroup : styles.grp1
-            // }
           >
             <div
               className={styles.groupColor}
