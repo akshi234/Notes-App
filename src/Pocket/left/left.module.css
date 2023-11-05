@@ -51,6 +51,7 @@
 .groups{
     margin-left: 1rem;
     overflow: scroll;
+    width: 45vw;
 }
 
 .groups::-webkit-scrollbar {
@@ -77,6 +78,28 @@
     font-weight: 500;
   }
 
+  .selectedGroup{
+    background-color: #F7ECDC;
+    width: calc(100%-6rem);
+    height: 10vh;
+    z-index: 5;
+    position: relative;
+    border-radius: 2rem;
+
+  }
+
+  .selectedGroup .groupColor{
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  .selectedGroup .note1{
+     margin-left: 6.5rem;
+    position: relative;
+    bottom: 3rem;
+    z-index: 2;
+  }
+  
   body .overlay{
     position: fixed;
     top: 0;

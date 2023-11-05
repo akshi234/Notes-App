@@ -81,8 +81,11 @@ function Left({ onGroupClick }) {
         {groups.map((group, index) => (
           <div
             key={index}
-            className={styles.grp1}
+            // className={styles.grp1}
             onClick={() => handleGroupClick(group.name)}
+            className={
+              group.name === selectedGroup ? styles.selectedGroup : styles.grp1
+            }
           >
             <div
               className={styles.groupColor}
