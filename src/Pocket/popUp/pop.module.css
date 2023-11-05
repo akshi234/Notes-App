@@ -1,0 +1,158 @@
+.popWrapper{
+    background-color: white;
+    position: absolute;
+    left: 50%; 
+    top: 50%;  
+    transform: translate(-50%, -50%); 
+    width: 38vw; 
+    height: 35vh;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    z-index: 999;   
+}
+.showPopup{
+    display: block;
+}
+.noteGrp{
+   font-size: 1.5rem;
+   font-weight: 600;
+   margin-top: 1rem;
+   margin-left: 2rem;
+}
+.grpName{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.inputField{
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    border-color: #CCCCCC;
+}
+
+.grpColor{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.div1, .div2, .div3, .div4, .div5, .div6{
+    background-color: #B38BFA;
+    width: 2vw;
+    height: 4vh;
+    border-radius: 50%;
+    position: relative;
+    left: 2.2rem;
+}
+
+.div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover, .div6:hover{
+    transform: scale(0.95);
+}
+
+.div2{
+    background-color: #FF79F2;
+}
+.div3{
+    background-color: #43E6FC;
+}
+.div4{
+    background-color: #F19576;
+}
+.div5{
+    background-color: #0047FF;
+}
+.div6{
+    background-color: #6691FF;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    float: right;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    width: 7vw;
+    height: 3.5vh;
+    border-radius: .5rem;
+    border:none;
+}
+
+.button:hover{
+    background-color: rgb(50, 48, 48);
+
+}
+
+@media (max-width : 900px){
+    .popWrapper{
+        width: 80vw;
+        height: 25vh;
+           
+    }
+    .noteGrp{
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-left: .01rem;
+        margin-top: .01rem;
+    }
+    .grpName{
+        font-size: 1.1rem;
+        margin-left: .5rem;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+    .inputField{
+        width: 38vw;
+        height: 2.5vh;
+        margin-left: -1rem;
+        font-size: .6rem;
+        padding: 5px;
+    }
+    .grpColor{
+        font-size: 1.1rem;
+        margin-left: .5rem;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+    .div1, .div2, .div3, .div4, .div5, .div6{
+        width: 5vw;
+        height: 3vh;
+        border-radius: 50%;
+        position: relative;
+        left: .6rem;
+        top: .2rem;
+    }
+    .button{
+        width: 65vw;
+        height: 4vh;
+        margin-right: 2rem;
+        margin-top: 2.2rem;
+    }
+}
+
+
+@media (max-height:600px){
+    .popWrapper{
+        height: 35vh;
+    }
+
+    .div1, .div2, .div3, .div4, .div5, .div6{
+        width: 5vw;
+        height: 4vh;
+    }
+
+    .button{
+        height: 5vh;
+    }
+}

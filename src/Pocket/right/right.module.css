@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.rightContainer{
+    background-color: #F7ECDC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 110vw;
+    float: right;
+    font-weight: 600;
+}
+
+.lockText{
+    position: relative;
+    top: 9rem;
+    font-weight: 600;
+    left: 5rem;
+    width: 20rem;
+}
+.lock{
+   position: relative;
+   top: .1rem;
+   width: .8rem;
+
+}
+.endend{
+    position: relative;
+    left: .2rem;
+}
+ @media (max-width: 900px){
+    .rightContainer{
+        display: none;
+    }
+ }
